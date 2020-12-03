@@ -5,6 +5,9 @@ import theme from "../theme";
 
 const client = createClient({
   url: "http://localhost:4000/graphql",
+  fetchOptions: {
+    credentials: "include", // send cookie when register or login
+  },
 });
 
 function MyApp({ Component, pageProps }) {
